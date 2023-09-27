@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="document.body.style.background='cyan'">click-me1</button> <!--with inline-->
+    <button onclick="button2()">click-me2</button> <!--with function-->
+    <button id="button3">click-me3</button> <!--with get element by id-->
+    <button id="button4">click-me4</button> <!--with event listener-->
+    
+    <script>
+        function button2(){
+            document.body.style.background='red';
+        }
+
+
+        function btn3(){
+            document.body.style.background='green';
+        }
+
+
+        document.getElementById("button3").onclick=btn3;
+        var btn4= document.getElementById("button4");
+        btn4.addEventListener("click",function(){
+        document.body.style.background="tomato";
+       })
+    </script>
+</body>
+</html>

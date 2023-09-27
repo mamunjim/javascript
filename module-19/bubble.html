@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>My list</h1>
+        <ul id="list">
+            <li id="item-1">Lorem, ipsum dolor.</li>
+            <li id="item-2">Corrupti, reiciendis consectetur.</li>
+            <li id="item-3">Velit, dolorem ad.</li>
+        </ul>
+    </div>
+
+    <script>
+        var events1=document.getElementById("item-1").addEventListener("click",
+            function(){
+                console.log("someone clicked on li");
+                event.stopPropagation(); //stop continue bubbling
+            }
+        );
+
+        var events1=document.getElementById("list").addEventListener("click",
+            function(){
+                console.log("someone clicked on ul");
+            }
+        );
+
+        var events1=document.getElementById("container").addEventListener("click",
+            function(){
+                console.log("someone clicked on container");
+            }
+        );
+        
+    </script>
+</body>
+</html>

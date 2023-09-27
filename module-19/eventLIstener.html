@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <ul id="parent-list">
+            <li class="list-item">Lorem ipsum dolor sit amet.</li>
+            <li class="list-item">Quas necessitatibus nihil modi voluptas?</li>
+            <li class="list-item">Rem ipsum excepturi modi veniam?</li>
+            <li class="list-item">Iure maxime repudiandae nobis facere!</li>
+            <li class="list-item">Tempora, aut quia. Quasi, nemo.</li>
+        </ul>
+    </div>
+    <button id="add-item">add new</button>
+
+    <script>
+         // remove item on click
+        //  var listItem=document.getElementsByTagName("li");
+        // for(i=0;i<listItem.length;i++){
+        //     var element=listItem[i];
+        //     element.addEventListener("click",function(){
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+        var parentList=document.getElementById("parent-list");
+        parentList.addEventListener("click",function(){
+            event.target.parentNode.removeChild(event.target);
+        })
+        // add item on click on button
+        var addItem=document.getElementById("add-item");
+        addItem.addEventListener("click",function(){
+            var parentList= document.getElementById("parent-list");
+            var newChild=document.createElement("li");
+            newChild.innerHTML="assalamu alaikum";
+            parentList.appendChild(newChild);
+        })
+
+       
+        </script>
+</body>
+</html>
